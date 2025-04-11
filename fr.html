@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- Version 1.0.1 - Added language selector in footer -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Windows | Nettoyage professionnel de vitres au Québec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(236,253,245,0.8) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-sparkle text-blue-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Lumière<span class="text-blue-500">Windows</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Accueil</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">À propos</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-600">Témoignages</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-blue-600">Témoignages</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 hero-gradient">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Des vitres cristallines <br>au <span class="text-blue-600">Québec</span></h1>
+                <p class="text-lg text-gray-600 mb-8">Service professionnel de nettoyage de vitres pour particuliers et entreprises à travers le Québec. Nous redonnons de la clarté à votre vue avec des solutions écologiques.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium text-center transition duration-300">Obtenir un devis gratuit</a>
+                    <a href="tel:+15141234567" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium text-center transition duration-300">
+                        <i class="fas fa-phone mr-2"></i> (514) 123-4567
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vitres propres avec vue sur la ville" class="rounded-xl shadow-xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos <span class="text-blue-600">Services</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous offrons des solutions complètes de nettoyage de vitres adaptées à vos besoins, en utilisant des produits et techniques respectueux de l'environnement.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nettoyage résidentiel</h3>
+                    <p class="text-gray-600 mb-4">Nettoyage complet des vitres intérieures et extérieures pour les résidences, incluant les moustiquaires, rails et rebords.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Service ponctuel ou récurrent</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Solutions de nettoyage écologiques</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Résultats sans traces</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nettoyage commercial</h3>
+                    <p class="text-gray-600 mb-4">Nettoyage professionnel pour immeubles de bureaux, commerces et propriétés commerciales de toutes tailles.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Nettoyage de vitres de gratte-ciel</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Plans d'entretien personnalisés</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Perturbation minimale des activités</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-snowflake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Services saisonniers</h3>
+                    <p class="text-gray-600 mb-4">Nettoyage spécialisé pour chaque saison afin que vos vitres restent impeccables toute l'année.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Forfaits de nettoyage printanier</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Services de préparation hivernale</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Option de nettoyage de gouttières</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <img src="https://images.pexels.com/photos/31435403/pexels-photo-31435403.jpeg" alt="Nettoyeur de vitres professionnel au travail" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">À propos de <span class="text-blue-600">Lumière Windows</span></h2>
+                    <p class="text-gray-600 mb-6">Fondée en 2015, Lumière Windows offre des services exceptionnels de nettoyage de vitres à la communauté québécoise. Notre équipe de professionnels certifiés prend fierté à fournir des résultats impeccables avec une attention aux détails qui nous distingue.</p>
+                    
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Pourquoi nous choisir?</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-leaf text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Écologique</h4>
+                                    <p class="text-gray-600 text-sm">Nous utilisons des solutions de nettoyage biodégradables et non toxiques, sans danger pour votre famille et vos animaux.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Complètement assuré</h4>
+                                    <p class="text-gray-600 text-sm">Assurance responsabilité civile de 2M$ pour votre tranquillité d'esprit.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-award text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Certifié</h4>
+                                    <p class="text-gray-600 text-sm">Professionnels certifiés IWCA avec 5+ ans d'expérience.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Fiable</h4>
+                                    <p class="text-gray-600 text-sm">Service ponctuel avec une garantie de satisfaction à 100%.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Desservant tout le Québec</h3>
+                        <p class="text-gray-600 mb-4">Nous servons fièrement des clients résidentiels et commerciaux dans toute la région du Grand Québec, incluant :</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Montréal</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Québec</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Laval</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Gatineau</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Longueuil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Témoignages de nos <span class="text-blue-600">clients</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ne croyez pas seulement ce que nous disons. Voici ce que nos clients satisfaits pensent de nos services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sophie Tremblay</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"L'équipe de Lumière Windows a transformé les vitres de mon condo! Après des années à essayer différentes entreprises, j'ai enfin trouvé des professionnels fiers de leur travail. Ma vue sur le Mont-Royal n'a jamais été aussi claire."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Jean-Luc Bélanger</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"En tant que restaurateur, la première impression est cruciale. Lumière Windows maintient notre vitrine étincelante, ce que nos clients mentionnent souvent. Leur flexibilité pour s'adapter à nos heures d'ouverture est très appréciée."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Élise Dubois</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"J'utilise le forfait saisonnier de Lumière depuis deux ans maintenant. Ils se souviennent de tous les petits détails d'une visite à l'autre. Le service de préparation hivernale m'a évité des dommages dus à la glace l'an dernier. Je les recommande fortement!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Obtenez votre <span class="text-white">devis gratuit</span> aujourd'hui</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Prêt à découvrir la différence Lumière Windows? Contactez-nous pour une estimation sans obligation.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-700 p-8">
+                        <h3 class="text-xl font-semibold mb-6">Coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4 text-blue-300"></i>
+                                <div>
+                                    <h4 class="font-medium">Adresse</h4>
+                                    <p class="text-blue-100 text-sm">123 Rue Saint-Laurent, Montréal, QC H2Y 1Y6</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-4 text-blue-300"></i>
+                                <div>
+                                    <h4 class="font-medium">Téléphone</h4>
+                                    <p class="text-blue-100 text-sm">(514) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4 text-blue-300"></i>
+                                <div>
+                                    <h4 class="font-medium">Courriel</h4>
+                                    <p class="text-blue-100 text-sm">info@lumierewindows.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock mt-1 mr-4 text-blue-300"></i>
+                                <div>
+                                    <h4 class="font-medium">Heures d'ouverture</h4>
+                                    <p class="text-blue-100 text-sm">Lundi - Vendredi: 8h00 - 18h00<br>Samedi: 9h00 - 16h00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-medium mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center transition">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-gray-800" placeholder="Votre nom">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Courriel</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-gray-800" placeholder="votre@courriel.com">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-gray-800" placeholder="(123) 456-7890">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service requis</label>
+                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-gray-800">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="residential">Nettoyage résidentiel</option>
+                                    <option value="commercial">Nettoyage commercial</option>
+                                    <option value="seasonal">Service saisonnier</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-gray-800" placeholder="Décrivez vos besoins en nettoyage de vitres..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Questions <span class="text-blue-600">fréquentes</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Trouvez des réponses aux questions courantes sur nos services de nettoyage de vitres.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left">
+                            <h3 class="font-semibold text-gray-800">À quelle fréquence devrais-je faire nettoyer mes vitres professionnellement?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">Pour la plupart des résidences, nous recommandons un nettoyage professionnel 2 à 4 fois par an. Cependant, cela dépend de facteurs comme votre emplacement (les zones urbaines peuvent nécessiter un nettoyage plus fréquent), des conditions météorologiques et de vos préférences personnelles. Les propriétés commerciales nécessitent généralement un service mensuel ou trimestriel.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left">
+                            <h3 class="font-semibold text-gray-800">Nettoyez-vous les vitres en hiver?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">Oui, nous offrons un service toute l'année, y compris le nettoyage hivernal. Nous utilisons des solutions spécialisées qui empêchent le gel et prenons des précautions supplémentaires avec les surfaces extérieures par temps froid. De nombreux clients apprécient avoir des vitres propres avant les rassemblements des fêtes ou pour maximiser le peu de soleil hivernal.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left">
+                            <h3 class="font-semibold text-gray-800">Vos produits de nettoyage sont-ils sûrs pour les enfants et les animaux?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">Absolument. Nous utilisons des solutions de nettoyage écologiques, non toxiques, biodégradables et sans produits chimiques agressifs. Nos produits sont sans danger pour les familles avec enfants et animaux, et nous serons heureux de fournir des informations sur les ingrédients sur demande.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left">
+                            <h3 class="font-semibold text-gray-800">Qu'est-ce qui est inclus dans votre service standard de nettoyage de vitres?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">Notre service standard comprend le nettoyage de toutes les surfaces vitrées (intérieures et extérieures), des cadres de fenêtres, des appuis et des rails. Nous nettoyons également les moustiquaires et enlevons les toiles d'araignée ou débris autour des fenêtres. Pour les propriétés commerciales, nous incluons les portes vitrées extérieures et toutes les lucarnes accessibles.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left">
+                            <h3 class="font-semibold text-gray-800">Comment gérez-vous les vitres difficiles d'accès?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">Notre équipe est formée et équipée pour travailler sur des vitres à n'importe quelle hauteur. Nous utilisons des perches télescopiques pour les fenêtres moyennement hautes et des échafaudages professionnels ou des plates-formes suspendues pour les immeubles de grande hauteur. Tous nos techniciens sont certifiés en protection contre les chutes et en procédures de sécurité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ accordion - Fixed version
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.bg-white');
+                    const content = faqItem.querySelector('.faq-content');
+                    const icon = button.querySelector('i');
+                    
+                    // Toggle content
+                    content.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    
+                    // Close other open FAQs
+                    document.querySelectorAll('.faq-content').forEach(otherContent => {
+                        if (otherContent !== content && !otherContent.classList.contains('hidden')) {
+                            otherContent.classList.add('hidden');
+                            const otherIcon = otherContent.closest('.bg-white').querySelector('.faq-toggle i');
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-sparkle text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-white">Lumière<span class="text-blue-500">Windows</span></span>
+                    </div>
+                    <p class="mb-4">Services professionnels de nettoyage de vitres pour résidences et entreprises au Québec depuis 2015.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Nettoyage résidentiel</a></li>
+                        <li><a href="#" class="hover:text-white transition">Nettoyage commercial</a></li>
+                        <li><a href="#" class="hover:text-white transition">Services saisonniers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Nettoyage de gouttières</a></li>
+                        <li><a href="#" class="hover:text-white transition">Lavage à pression</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-white transition">À propos</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Témoignages</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Language Selector as the last column -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Langue</h3>
+                    <div class="relative">
+                        <select id="language-selector" class="appearance-none bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Lumière Windows. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
