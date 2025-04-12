@@ -5,13 +5,13 @@
       "dest": "/fr/index.html"
     },
     {
-      "src": "/window-cleaning-demo/en",
+      "src": "/window-cleaning-demo",
       "dest": "/index.html"
     },
+    // Redirect root requests to /window-cleaning-demo
     {
-      "src": "/window-cleaning-demo",
-      "dest": "/index.html",
-      "status": 301
+      "src": "/",
+      "status": 301,
+      "headers": { "Location": "/window-cleaning-demo" }
     }
   ]
-}
