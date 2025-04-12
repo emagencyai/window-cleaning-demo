@@ -1,16 +1,17 @@
 {
   "routes": [
     {
-      "src": "/fr",
-      "dest": "/fr.html"
+      "src": "/window-cleaning-demo/fr",
+      "dest": "/fr/index.html"
     },
     {
-      "src": "/en",
+      "src": "/window-cleaning-demo/en",
       "dest": "/index.html"
     },
     {
-      "src": "/",
-      "dest": "/index.html"
+      "src": "/window-cleaning-demo",
+      "dest": "/index.html",
+      "status": 301
     }
   ]
 }
